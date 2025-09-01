@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-const stairanimation = {
+const stairAnimation = {
     initial: { 
       top: "0%",
     },
@@ -25,14 +25,14 @@ const Stairs = () => {
       return (
       <motion.div 
         key={index} 
-        variants={stairanimation} 
+        variants={stairAnimation} 
         initial="initial" 
         animate="animate" 
         exit="exit" 
         transition={{ 
           duration: 0.4, 
           ease: "easeInOut", 
-          delay: reverseIndex * 0.1,
+          delay: reverseIndex(index) * 0.1,
         }}
         className="h-full w-full bg-white relative"
       />
